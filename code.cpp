@@ -12,7 +12,7 @@ int main() {
   getline(cin, s);
   cout << "The original string entered is: " << s << "\n";
   int size = s.length();
-  pid_t pid;  
+  pid_t pid;   // process id variable
   pid = fork();
   if(pid == 0) {
     // means child created
@@ -27,6 +27,7 @@ int main() {
     cout << "The decrypted message is: " << s << "\n";
   }
   else {
+    // parent process
     wait(NULL);
   }
 }
